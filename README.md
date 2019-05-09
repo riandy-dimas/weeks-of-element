@@ -44,6 +44,7 @@ The design was inspired by https://dribbble.com/shots/6041286-Switcher-LI and I 
 ---
 
 ### Credit Card Form - [Codesandbox](https://codesandbox.io/s/7y45q7p221?fontsize=14&view=preview)
+>![](credit-card-form.gif)
 
 
 Just a simple credit card form :) The design was purely my idea --I know the design is awful-- But I made this component for you guys :) Just a little modify needed to use it.
