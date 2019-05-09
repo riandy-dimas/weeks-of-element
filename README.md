@@ -4,7 +4,13 @@ My exploration, curiously, and work procrastination related to front-end develop
 ## Component
 
 ### Fluid Slider - [Codepen](https://codepen.io/riandy-dimas/full/KEwpdw)
+>![](fluid-slider.gif)
+
+
 This code design is purely inspired by https://github.com/Ramotion/fluid-slider and https://dribbble.com/shots/3868232-Fluid-Slider.
 
 ### Expanding Collection - [Codepen](https://codepen.io/riandy-dimas/full/xBwPQa)
+>![](expanding-collection-o.gif)
+
+
 This pen is inspired by https://github.com/Ramotion/expanding-collection.
