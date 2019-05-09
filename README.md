@@ -22,9 +22,13 @@ This pen is inspired by https://github.com/Ramotion/expanding-collection.
 Random (?) fail (?) trying to create a circular loading.
 
 ### Three-box Loading - [Codepen](https://codepen.io/riandy-dimas/full/VOwGEK)
+>![](three-box-loading.gif)
+
 
 This pen was purely inspired by https://dribbble.com/shots/5845853-Loader-XLVII.
 
 ### Switch-a-Page - [Codepen](https://codepen.io/riandy-dimas/full/JqYqao)
+>![](switch-a-page.gif)
+
 
 The design was inspired by https://dribbble.com/shots/6041286-Switcher-LI and I only changed the perspective to vertical.
