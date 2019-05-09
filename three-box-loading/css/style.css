@@ -1,0 +1,39 @@
+html {
+  background-image: radial-gradient(circle, #ffffff, #e2e2e2, #c6c6c6, #aaaaaa, #8f8f8f);
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+.loader--element {
+  border-radius: 8px;
+  box-shadow: 0 0 0 .2em #484848;
+  box-sizing: border-box;
+}
+.loader__left, .loader__right {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+}
+.loader__left {
+  left: 0;
+}
+.loader__right {
+  right: 0;
+}
+.loader__bottom {
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  bottom: 0;
+}
