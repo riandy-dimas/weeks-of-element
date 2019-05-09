@@ -14,3 +14,8 @@ This code design is purely inspired by https://github.com/Ramotion/fluid-slider 
 
 
 This pen is inspired by https://github.com/Ramotion/expanding-collection.
+
+### Circle Loading - [Codepen](https://codepen.io/riandy-dimas/full/xNxzOO)
+>![](circle-loading.gif)
+
+Random (?) fail (?) trying to create a circular loading.
