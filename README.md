@@ -1,5 +1,5 @@
 # Weeks of Element
-My exploration, curiosity, and work procrastination related to front-end development. For the preview mode I will update as best I can do here, or just visit my [Collection in Codepen](https://codepen.io/collection/nMoNxQ/).
+My exploration, curiosity, and work procrastination related to front-end development. For the preview mode I will update as best I can do here, or just visit my [Collection in Codepen](https://codepen.io/collection/nMoNxQ/) or [my Codesandbox page](https://codesandbox.io/u/riandy-dimas).
 
 ### Fluid Slider - [Codepen](https://codepen.io/riandy-dimas/full/KEwpdw)
 >![](fluid-slider.gif)
