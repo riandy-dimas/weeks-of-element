@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Expanding Collection</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- <body onload="setIndex(0)"> -->
+   <div class="container">
+    <div id="wrapper" class="wrapper">
+      <div id="content" class="expand_collection" onclick="moveTo(event)">
+        <div class="expand_collection--content expand_collection--content-active" onclick="setIndex(0, null, event)">
+          <div class="expand_collection--image" onclick="toggleViewState(event, 0)">
+            <div class="expand_collection--title">
+              Dotonbori
+            </div>
+            <div class="expand_collection--geo">
+              <div>
+                NORTH LAT 36
+              </div>
+              <div>
+                <i class="material-icons">room</i>
+              </div>
+              <div>
+                EAST LNG 47
+              </div>
+            </div>
+            <img src="https://placeimg.com/480/640/arch" width="100%" alt="First Image">
+            <div id="close" class="close_button"  onclick='toggleFullState(event)'>
+              <i class="material-icons">
+                clear
+              </i>
+            </div>
+          </div>
+          <div class="expand_collection--box" onclick="toggleFullState(event)">
+            <div class="box_view">
+              <div class="box_view--content">
+                <div class="box_view--box box_view--address">
+                  Osaka - Japan, 642312
+                </div>
+                <div class="box_view--box box_view--number">
+                  No. 123456
+                </div>
+                <div class="box_view--box box_view--stars">
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star material-icons">star</i>
+                  <i class="box_view--star material-icons">star</i>
+                </div>
+                <div class="box_view--box box_view--accounts">
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,brazil" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,paris" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                  </div>
+                </div>
+                <div class="box_view--box box_view--menu">
+                  <i class="material-icons">more_vert</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expand_collection--full">
+            <div class="comment_list">
+              <div class="comment_list--list comment_list--list-detail">
+                <div class="comment_list--address">
+                  Dotonbori, Osaka Prefecture 542-0071, Japan
+                </div>
+                <div class="comment_list--number">
+                  No. 123456
+                </div>
+                <div class="comment_list--stars">
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star material-icons">star</i>
+                  <i class="comment_list--star material-icons">star</i>
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Haruka Kanata
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,brazil" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Thomas Rude
+                </div>
+                <div class="comment_list--social">
+                  Feb 15 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Kimberley Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 15 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expand_collection--content" onclick="setIndex(1, null, event)">
+          <div class="expand_collection--image" onclick="toggleViewState(event, 1)">
+            <div class="expand_collection--title">
+              Slipicon Valley
+            </div>
+            <div class="expand_collection--geo">
+              <div>
+                NORTH LAT 36
+              </div>
+              <div>
+                <i class="material-icons">room</i>
+              </div>
+              <div>
+                EAST LNG 47
+              </div>
+            </div>
+            <img src="https://placeimg.com/480/640/tech" width="100%" alt="First Image">
+            <div id="close" class="close_button"  onclick='toggleFullState(event)'>
+              <i class="material-icons">
+                clear
+              </i>
+            </div>
+          </div>
+          <div class="expand_collection--box" onclick='toggleFullState(event)'>
+            <div class="box_view">
+              <div class="box_view--content">
+                <div class="box_view--box box_view--address">
+                  Jakarta - Indonesia, 11480
+                </div>
+                <div class="box_view--box box_view--number">
+                  No. 192313
+                </div>
+                <div class="box_view--box box_view--stars">
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star material-icons">star</i>
+                </div>
+                <div class="box_view--box box_view--accounts">
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,brazil" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,paris" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                  </div>
+                </div>
+                <div class="box_view--box box_view--menu">
+                  <i class="material-icons">more_vert</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expand_collection--full">
+            <div class="comment_list">
+              <div class="comment_list--list comment_list--list-detail">
+                <div class="comment_list--address">
+                  Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11480
+                </div>
+                <div class="comment_list--number">
+                  No. 192313
+                </div>
+                <div class="comment_list--stars">
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star material-icons">star</i>
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expand_collection--content" onclick="setIndex(2, null, event)">
+          <div class="expand_collection--image" onclick="toggleViewState(event, 2)">
+            <div class="expand_collection--title">
+              Way Kambas
+            </div>
+            <div class="expand_collection--geo">
+              <div>
+                NORTH LAT 36
+              </div>
+              <div>
+                <i class="material-icons">room</i>
+              </div>
+              <div>
+                EAST LNG 47
+              </div>
+            </div>
+            <img src="https://placeimg.com/480/640/animals" width="100%" alt="First Image">
+            <div id="close" class="close_button"  onclick='toggleFullState(event)'>
+              <i class="material-icons">
+                clear
+              </i>
+            </div>
+          </div>
+          <div class="expand_collection--box" onclick='toggleFullState(event)'>
+            <div class="box_view">
+              <div class="box_view--content">
+                <div class="box_view--box box_view--address">
+                  Bandar Lampung - Indonesia, 35127
+                </div>
+                <div class="box_view--box box_view--number">
+                  No. 332123
+                </div>
+                <div class="box_view--box box_view--stars">
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                </div>
+                <div class="box_view--box box_view--accounts">
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,brazil" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,paris" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                  </div>
+                </div>
+                <div class="box_view--box box_view--menu">
+                  <i class="material-icons">more_vert</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expand_collection--full">
+            <div class="comment_list">
+              <div class="comment_list--list comment_list--list-detail">
+                <div class="comment_list--address">
+                  Way Kambas, Bandar Lampung
+                </div>
+                <div class="comment_list--number">
+                  No. 332123
+                </div>
+                <div class="comment_list--stars">
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expand_collection--content" onclick="setIndex(3, null, event)">
+          <div class="expand_collection--image" onclick="toggleViewState(event, 3)">
+            <div class="expand_collection--title">
+              Amazon Forest
+            </div>
+            <div class="expand_collection--geo">
+              <div>
+                NORTH LAT 36
+              </div>
+              <div>
+                <i class="material-icons">room</i>
+              </div>
+              <div>
+                EAST LNG 47
+              </div>
+            </div>
+            <img src="https://placeimg.com/480/640/nature" width="100%" alt="First Image">
+            <div id="close" class="close_button"  onclick='toggleFullState(event)'>
+              <i class="material-icons">
+                clear
+              </i>
+            </div>
+          </div>
+          <div class="expand_collection--box" onclick='toggleFullState(event)'>
+            <div class="box_view">
+              <div class="box_view--content">
+                <div class="box_view--box box_view--address">
+                  Amazon - Brazilia, 35127
+                </div>
+                <div class="box_view--box box_view--number">
+                  No. 242114
+                </div>
+                <div class="box_view--box box_view--stars">
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star box_view--star-active material-icons">star</i>
+                  <i class="box_view--star material-icons">star</i>
+                  <i class="box_view--star material-icons">star</i>
+                </div>
+                <div class="box_view--box box_view--accounts">
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,brazil" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,paris" alt="">
+                  </div>
+                  <div class="box_view--account">
+                    <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                  </div>
+                </div>
+                <div class="box_view--box box_view--menu">
+                  <i class="material-icons">more_vert</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expand_collection--full">
+            <div class="comment_list">
+              <div class="comment_list--list comment_list--list-detail">
+                <div class="comment_list--address">
+                  Amazon, Brazilia
+                </div>
+                <div class="comment_list--number">
+                  No. 242114
+                </div>
+                <div class="comment_list--stars">
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star comment_list--star-active material-icons">star</i>
+                  <i class="comment_list--star material-icons">star</i>
+                  <i class="comment_list--star material-icons">star</i>
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+              <div class="comment_list--list">
+                <div class="comment_list--profile_picture">
+                  <img src="https://loremflickr.com/100/100/girl,japan" alt="">
+                </div>
+                <div class="comment_list--profile_name">
+                  Alan Walker
+                </div>
+                <div class="comment_list--social">
+                  Feb 14 <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="comment_list--comment">
+                  Lorem ipsum dolor sit amet, ne pro eros velit falli. Ad vim nostro prompta, cum eu affert sadipscing, nostrum instructior ut usu. Et fuisset recusabo suavitate sea. Vix ad nobis noster dolorum, quando tation docendi te cum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="index" class="content_index">
+        1/4
+      </div>
+    </div>
+  </div>
+<!-- </body> -->
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  position: relative;
+  height: 100%;
+  background-image: radial-gradient(circle, #d7ffd9, #caf5cc, #beeac0, #b1e0b3, #a5d6a7);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 480px;
+  width: 320px;
+  border: 2px solid #2e7d32;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(to top, #00796b, #3b9079, #5fa787, #82be97, #a5d6a7);  
+  transition: all 500ms ease;
+}
+
+.expand_collection {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+  align-items: center;
+  z-index: 1;
+  transition: all 500ms ease;
+  
+  &--content {
+    margin: 0 20px;
+    position: relative;
+    opacity: 0.5;
+    width: 180px;
+    // z-index: 2;
+    pointer-events: none;
+    transition: all 500ms ease;
+    
+    &:first-child {
+      margin-left: 70px;
+    }
+    
+    &:last-child {
+      margin-right: 64px;
+    }
+    
+    &-active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 2;
+    }
+    
+    &-state_card {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    // &-state_full {
+    //   // position: inherit;
+    // }
+  }
+  
+  &--title {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    width: fit-content;
+    max-width: 154px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+  }
+  
+  &--image {
+    width: 180px;
+    z-index: 3;
+    position: relative;
+    transition: all 500ms ease;
+    transform: none;
+    cursor: n-resize;
+    
+    & > img {    
+      pointer-events:none;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 10px 6px -6px #444;
+      -moz-box-shadow: 0 10px 6px -6px #444;
+      box-shadow: 0 18px 6px -8px rgba(0, 0, 0, 0.25);
+    }
+    
+    &-active {
+      transform: translateY(-50px);
+      cursor: s-resize;
+    }
+    
+    &-state_full {
+      transition: all 500ms ease;
+      transform: scale3d(1.85, 1.85, 1.85) translateY(-180px);
+      cursor: default;
+      
+      & > img {
+        box-shadow: none;
+      }
+      
+      & > div:first-child {
+         transform: translate3d(-50%, 180px, 0);
+      }
+    }
+  }  
+  
+  &--geo {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    font-size: 8.5px;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    
+    & div i {
+      font-size: 16px;
+    }
+  }
+  
+  &--box {
+    position: absolute;
+    width: 220px;
+    height: 270px;
+    top: 0;
+    z-index: 2;
+    transition: all 500ms ease;
+    transform: scale3d(0.8, 0.8, 0.8) translate3d(-25px, -30px, 0);   
+    opacity: 1;
+    
+    &-active {
+      transform: translate3d(-20px, 20px, 0);
+      cursor: ne-resize;
+    }
+    
+    &-state_full {
+      // opacity: 0;
+      transform: scale(1.5) translate3d(-10px, -20px, 0);
+      
+      & > div {
+        height: 300px
+      }
+    }
+  }
+  
+  &--full {
+    background: #fff;
+    width: 320px;
+    height: 100%;
+    z-index: 4;
+    position: absolute;
+    left: -50px;
+    top: 65px;
+    opacity: 0;
+    z-index: 4;
+    transition: all 500ms ease;
+    transform: scale(0);
+    padding-top: 340px;
+    box-sizing: border-box;
+    
+    &-active {
+      display: block;
+      transform: scale(1);
+      opacity: 1;
+      height: 362px;
+      top: 5px;
+      padding-top: 0;
+    }
+  }
+}
+
+.box_view {
+  width: 220px;
+  height: 270px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  color: #8d8d8d;
+  transition: all 500ms ease;
+  
+  &--content {
+    position: absolute;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20px;
+    grid-template-areas: 
+      "address address"
+      "number stars"
+      "accounts menu";
+  }
+  
+  &--box {
+    font-size: 10px;
+    padding: 0 22px;
+    transition: all 500ms ease;
+    
+    & > i {
+      display: inline;
+    }
+  }
+  
+  &--address {
+    grid-area: address;
+    text-align: center;
+  }
+  
+  &--number {
+    grid-area: number;
+    text-align: left;
+  }
+  
+  &--stars {
+    grid-area: stars;
+    text-align: right;
+    
+  }
+  
+  &--star {
+    font-size: 10px;
+    
+    &-active {
+      color: #81c784;
+    }
+  }
+  
+  &--accounts {
+    grid-area: accounts;
+    padding-right: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  &--account {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    overflow: hidden;
+    float: left;
+    
+    &:not(:first-child) {
+      margin-left: -7px;
+    }
+    
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  &--menu {
+    grid-area: menu;
+    height: 30px;
+    
+    & > i {
+      float: right;
+      margin-right: -8px;
+    }
+  }
+}
+
+.comment_list {
+  width: calc(100%);
+  max-height: 357px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  overflow: auto;
+  
+  &--address {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  &--stars {
+    display: flex;
+    line-height: 24px;
+  }
+  
+  &--star {
+    font-size: 13px;
+    color: #eee;
+    
+    &-active {
+      color: #c8e6c9;
+    }
+  }
+  
+  &--list {
+    height: 110px;
+    width: 100%;
+    font-size: 12px;
+    color: #484848;
+    // border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 45px 155px 100px;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: 
+      "picture name social"
+      "comment comment comment";
+    
+    &-detail {
+      height: 80px;
+      line-height: 16px;
+      position: relative;
+      color: #fff;
+      background: 
+        radial-gradient(
+          circle at left,
+          #bdbdbd, 
+          #fff 250px
+        );
+      z-index: -1;
+      display: flex;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      &::after {
+        // opacity: 1;
+        content: '';
+        position: absolute;
+        z-index: -2;
+        
+        // background-color: #fff;
+        background-image: url(http://worldartsme.com/images/world-map-for-background-clipart-1.jpg);
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        background-position: top right;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
+   &--profile_picture {
+     grid-area: picture;
+     height: 35px;
+     width: 35px;
+     border-radius: 50%;
+     overflow: hidden;
+     margin: auto 0;
+     
+     & > img {
+       width: 100%;
+       height: auto;
+     }
+    }
+    
+    &--profile_name {
+      grid-area: name;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 14px;
+    }
+    
+    &--social {
+      grid-area: social;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 12px;
+      color: #ccc;
+      
+      & > i {
+        font-size: 14px;
+        margin-left: 8px;
+        margin-top: -3px;
+      }
+    }
+    
+    &--comment {
+      grid-area: comment;
+      width: 100%;
+    }
+}
+
+.close_button {
+  position: absolute;
+  bottom: unset;
+  top: 0;
+  right: 7px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  transform: scale(0);
+  transition: all 500ms ease;
+  cursor: pointer;
+  
+  & i {
+    transition: all 1000ms ease;
+  }
+  
+  & > i {
+    font-size: 16px;
+    transform: rotate(360deg);
+  }
+  
+  &-active {
+    transform: scale(1);
+    bottom: 48px;
+    top: unset;
+    & i {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+.content_index {
+  position: absolute;
+  bottom: 30px ;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eee;
+}
+
+.animating {
+  pointer-events: none;
+}
