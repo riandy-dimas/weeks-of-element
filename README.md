@@ -1,6 +1,14 @@
 # Weeks of Element
 My exploration, curiosity, and work procrastination related to front-end development. For the preview mode I will update as best I can do here, or just visit my [Collection in Codepen](https://codepen.io/collection/nMoNxQ/) or [my Codesandbox page](https://codesandbox.io/u/riandy-dimas).
 
+
+### Morph-o-Load - [Codepen](https://codepen.io/riandy-dimas/full/eaWLVr)
+
+
+Using GSAP plugin's (MorphSVG) animating vehicle change in motion. All of the SVG was downloaded from Material Icons by Google (https://material.io/tools/icons/?style=round)
+
+---
+
 ### Expanding Collection - [Codepen](https://codepen.io/riandy-dimas/full/xBwPQa)
 >![](expanding-collection-o.gif)
 
