@@ -1,0 +1,15 @@
+html {
+  background-image: radial-gradient(circle, #dadada, #adadad, #818181, #595959, #333333);
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+path {
+  fill: #484848;
+}
