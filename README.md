@@ -1,14 +1,6 @@
 # Weeks of Element
 My exploration, curiosity, and work procrastination related to front-end development. For the preview mode I will update as best I can do here, or just visit my [Collection in Codepen](https://codepen.io/collection/nMoNxQ/) or [my Codesandbox page](https://codesandbox.io/u/riandy-dimas).
 
-### Fluid Slider - [Codepen](https://codepen.io/riandy-dimas/full/KEwpdw)
->![](fluid-slider.gif)
-
-
-This code design is purely inspired by https://github.com/Ramotion/fluid-slider and https://dribbble.com/shots/3868232-Fluid-Slider.
-
----
-
 ### Expanding Collection - [Codepen](https://codepen.io/riandy-dimas/full/xBwPQa)
 >![](expanding-collection-o.gif)
 
@@ -46,5 +38,15 @@ The design was inspired by https://dribbble.com/shots/6041286-Switcher-LI and I 
 
 
 Just a simple credit card form :) The design was purely my idea --I know the design is awful-- But I made this component for you guys :) Just a little modify needed to use it.
+
+---
+
+### Fluid Slider - [Codepen](https://codepen.io/riandy-dimas/full/KEwpdw)
+>![](fluid-slider.gif)
+
+
+This code design is purely inspired by https://github.com/Ramotion/fluid-slider and https://dribbble.com/shots/3868232-Fluid-Slider.
+
+---
 
 
