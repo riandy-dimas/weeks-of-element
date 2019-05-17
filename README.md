@@ -3,6 +3,7 @@ My exploration, curiosity, and work procrastination related to front-end develop
 
 
 ### Morph-o-Load - [Codepen](https://codepen.io/riandy-dimas/full/eaWLVr)
+>![](morph-o-load.gif)
 
 
 Using GSAP plugin's (MorphSVG) animating vehicle change in motion. All of the SVG was downloaded from Material Icons by Google (https://material.io/tools/icons/?style=round)
