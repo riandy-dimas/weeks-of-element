@@ -12,13 +12,13 @@ class Input extends PureComponent {
     this.setState({
       isFocus: true
     });
-    this.props.onFocus();
+    if (this.props.onFocus) this.props.onFocus();
   }
   handleBlur() {
     this.setState({
       isFocus: false
     });
-    this.props.onBlur();
+    if (this.props.onBlur) this.props.onBlur();
   }
   render() {
     const {

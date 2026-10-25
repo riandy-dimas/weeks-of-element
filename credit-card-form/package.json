@@ -12,13 +12,14 @@
     "payment": "2.3.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
-    "react-scripts": "2.0.3"
+    "react-scripts": "5.0.1",
+    "sass": "^1.106.1"
   },
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "browserslist": [
@@ -26,5 +27,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "npm@11.19.1"
 }
